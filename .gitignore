@@ -15,7 +15,7 @@ pygame.draw.circle(screen, [255,255,255], [150,210],50,0) # Loob täis värvitud
 pygame.draw.circle(screen, [0,0,0], [135,40],5,0) # loob vasakpoolse musta silma
 pygame.draw.circle(screen, [0,0,0], [165,40],5,0) # loob parempoolse musta silma
 
-pygame.draw.polygon(screen, [255,153,0], [[145,40], [153,39], [150,60]])
+pygame.draw.polygon(screen, [255,153,0], [[145,40], [153,39], [150,60]]) # Loob oranzi nina
 
 
 
