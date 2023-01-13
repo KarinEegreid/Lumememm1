@@ -7,7 +7,8 @@ pygame.init() # käivitab pygame
 
 screen=pygame.display.set_mode([300,300]) # loob ekraani määratud koordinaatidel.
 
-pygame.display.set_caption("Lumemees, Karl Paju")
+pygame.display.set_caption("Lumemees, Karl Paju") # Ekraanile loodud nimi
+
 #Lumememme joonistamine
 pygame.draw.circle(screen, [255,255,255], [150,50],30,0) # Loob täis värvitud ringi antud parameetritel
 pygame.draw.circle(screen, [255,255,255], [150,120],40,0) # Loob täis värvitud ringi antud parameetritel
@@ -21,10 +22,10 @@ pygame.draw.polygon(screen, [255,153,0], [[145,40], [153,39], [150,60]]) # Loob 
 
 
 
-pygame.display.flip()
+pygame.display.flip() # Uuendab ekraani
 
 
-running = True
+running = True 
 
 # Loop
 while running:
