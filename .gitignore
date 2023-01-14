@@ -13,6 +13,20 @@ pygame.display.set_caption("Lumemees, Karl Paju")  # Ekraanile loodud nimi
 
 screen.fill([0, 102, 255])  # Taust
 
+# Pilvede loomine
+pygame.draw.circle(screen, [255, 255, 255], [0, 0], 20, 0) #pilve osa 1
+pygame.draw.circle(screen, [255, 255, 255], [20, 0], 20, 0) #pilve osa 2
+pygame.draw.circle(screen, [255, 255, 255], [35, 0], 20, 0) #pilve osa 3
+
+pygame.draw.circle(screen, [255, 255, 255], [50, 100], 20, 0) #pilve osa 4
+pygame.draw.circle(screen, [255, 255, 255], [65, 100], 20, 0) #pilve osa 5
+pygame.draw.circle(screen, [255, 255, 255], [80, 100], 20, 0) #pilve osa 6
+
+pygame.draw.circle(screen, [255, 255, 255], [230, 50], 20, 0) #pilve osa 7
+pygame.draw.circle(screen, [255, 255, 255], [250, 50], 20, 0) #pilve osa 8
+pygame.draw.circle(screen, [255, 255, 255], [270, 50], 20, 0) #pilve osa 9
+
+
 # Lumememme joonistamine
 pygame.draw.circle(screen, [255, 255, 255], [150, 50], 30, 0)  # Loob täis värvitud ringi antud parameetritel
 pygame.draw.circle(screen, [255, 255, 255], [150, 120], 40, 0)  # Loob täis värvitud ringi antud parameetritel
@@ -47,6 +61,7 @@ pygame.draw.line(screen, [102, 51, 0], [70, 172], [65, 300])  # Harja kepp
 pygame.draw.rect(screen, [102, 51, 0], [44, 265, 50, 20], 0)  # Harja teine osa
 pygame.draw.rect(screen, [0, 0, 0], [44, 280, 50, 10], 0)  # Harja kolmas osa
 
+
 # Ekraani uuendamine
 pygame.display.flip()
 
@@ -63,3 +78,4 @@ while running:
         # running bool to false
         if event.type == pygame.QUIT:
             running = False
+
