@@ -1,33 +1,58 @@
 # Karl Paju IS22   Ülesanne 1: Akna loomine ja kujundid
-import pygame # impordib pygame
+import pygame  # impordib pygame
 
-pygame.init() # käivitab pygame
+pygame.init()  # käivitab pygame
 
 # ekraani seaded
 
-screen=pygame.display.set_mode([300,300]) # loob ekraani määratud koordinaatidel.
+screen = pygame.display.set_mode([300, 300])  # loob ekraani määratud koordinaatidel.
 
-pygame.display.set_caption("Lumemees, Karl Paju") # Ekraanile loodud nimi
+pygame.display.set_caption("Lumemees, Karl Paju")  # Ekraanile loodud nimi
 
-#Lumememme joonistamine
-pygame.draw.circle(screen, [255,255,255], [150,50],30,0) # Loob täis värvitud ringi antud parameetritel
-pygame.draw.circle(screen, [255,255,255], [150,120],40,0) # Loob täis värvitud ringi antud parameetritel
-pygame.draw.circle(screen, [255,255,255], [150,210],50,0) # Loob täis värvitud ringi antud parameetritel
-pygame.draw.circle(screen, [0,0,0], [135,40],5,0) # loob vasakpoolse musta silma
-pygame.draw.circle(screen, [0,0,0], [165,40],5,0) # loob parempoolse musta silma
+# Tausta loomine
 
-pygame.draw.polygon(screen, [255,153,0], [[145,40], [153,39], [150,60]]) # Loob oranzi nina
+screen.fill([0, 102, 255])  # Taust
 
+# Lumememme joonistamine
+pygame.draw.circle(screen, [255, 255, 255], [150, 50], 30, 0)  # Loob täis värvitud ringi antud parameetritel
+pygame.draw.circle(screen, [255, 255, 255], [150, 120], 40, 0)  # Loob täis värvitud ringi antud parameetritel
+pygame.draw.circle(screen, [255, 255, 255], [150, 210], 50, 0)  # Loob täis värvitud ringi antud parameetritel
+pygame.draw.circle(screen, [0, 0, 0], [135, 40], 5, 0)  # loob vasakpoolse musta silma
+pygame.draw.circle(screen, [0, 0, 0], [165, 40], 5, 0)  # loob parempoolse musta silma
+pygame.draw.polygon(screen, [255, 153, 0], [[145, 40], [153, 39], [150, 60]])  # Loob oranzi nina
 
+# Lumememme nööpide loomine
+pygame.draw.circle(screen, [0, 0, 0], [150, 150], 5, 0)  # loob esimese nööbi
+pygame.draw.circle(screen, [0, 0, 0], [150, 130], 5, 0)  # loob teise nööbi
+pygame.draw.circle(screen, [0, 0, 0], [150, 110], 5, 0)  # loob kolmanda nööbi
 
+# Päikse loomine
+pygame.draw.circle(screen, [204, 153, 0], [300, 0], 30, 0)  # Päikse loomine
+pygame.draw.line(screen, [204, 153, 0], [300, 0], [200, 15])  # Esimese päikse kiire loomine
+pygame.draw.line(screen, [204, 153, 0], [300, 0], [200, 40])  # Teise päikse kiire loomine
+pygame.draw.line(screen, [204, 153, 0], [300, 0], [210, 90])  # Kolmanda päikse kiire loomine
+pygame.draw.line(screen, [204, 153, 0], [300, 0], [270, 100])  # neljanda päikse kiire loomine
 
+# Mütsi loomine
+pygame.draw.rect(screen, [0, 0, 0], [120.5, 0.5, 61.5, 10], 0)  # Musta kübaru esimene osa
+pygame.draw.rect(screen, [128, 0, 0], [120.5, 5, 61.5, 20], 0)  # Musta kübaru punane lips
+pygame.draw.rect(screen, [0, 0, 0], [118, 10, 65, 25], 0)  # Musta kübaru teine osa
 
-pygame.display.flip() # Uuendab ekraani
+# Käte loomine
+pygame.draw.line(screen, [0, 0, 0], [111, 100], [70, 180])  # Esimene käsi
+pygame.draw.line(screen, [0, 0, 0], [210, 172], [186, 98])  # Teine käsi
 
+# Harja loomine,
+pygame.draw.line(screen, [102, 51, 0], [70, 172], [65, 300])  # Harja kepp
+pygame.draw.rect(screen, [102, 51, 0], [44, 265, 50, 20], 0)  # Harja teine osa
+pygame.draw.rect(screen, [0, 0, 0], [44, 280, 50, 10], 0)  # Harja kolmas osa
 
-running = True 
+# Ekraani uuendamine
+pygame.display.flip()
 
-# Loop
+# Loopi loomine
+running = True
+
 while running:
 
     # Check for event if user has pushed
@@ -38,4 +63,3 @@ while running:
         # running bool to false
         if event.type == pygame.QUIT:
             running = False
-
